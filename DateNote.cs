@@ -272,10 +272,7 @@ public partial class DateNote
             };
 
         foreach (KeyValuePair<string, int> kvp in months)
-        {
-            if (LevenshteinDistance(str.ToLower(), kvp.Key) <= 2)
-                return kvp.Value;
-        }
+            if (str == kvp.Key) return kvp.Value;
 
         return null;
     }
@@ -291,13 +288,11 @@ public partial class DateNote
             d[0, j] = j;
 
         for (int j = 1; j <= s2.Length; j++)
-        {
             for (int i = 1; i <= s1.Length; i++)
             {
                 int cost = (s1[i - 1] == s2[j - 1]) ? 0 : 1;
                 d[i, j] = Math.Min(Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1), d[i - 1, j - 1] + cost);
             }
-        }
 
         return d[s1.Length, s2.Length];
     }
