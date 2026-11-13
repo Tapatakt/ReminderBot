@@ -52,7 +52,7 @@ Telegram-бот для управления напоминаниями и зам
 
 ### Требования
 
-- .NET 10.0 SDK
+- .NET 11.0 SDK
 - Токен Telegram-бота (получить у [@BotFather](https://t.me/BotFather))
 
 ### Быстрый старт

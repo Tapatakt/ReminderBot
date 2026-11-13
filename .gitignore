@@ -1,0 +1,28 @@
+# .NET build artifacts
+publish/
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Visual Studio/VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Data files (may contain real user data from bot testing)
+*.txt
+*.txt.backup
+
+# Agent instructions (internal)
+AGENTS.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
