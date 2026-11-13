@@ -20,6 +20,9 @@ obj/
 # Agent instructions (internal)
 AGENTS.md
 
+# Config (may contain secrets)
+config.json
+
 # OS files
 .DS_Store
 Thumbs.db

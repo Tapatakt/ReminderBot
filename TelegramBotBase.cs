@@ -221,8 +221,8 @@ public abstract class TelegramBotBase(
         if (isAdmin && _adminCommands.Count > 0)
             commandHandled = await TryExecuteCommandAsync(text, _adminCommands, chatId);
 
-        // Если не обработано - проверяем обычные команды (только в разрешенных чатах)
-        if (!commandHandled && isAllowedChat)
+        // Если не обработано - проверяем обычные команды (в разрешенных чатах ИЛИ от админа)
+        if (!commandHandled && (isAdmin || isAllowedChat))
             commandHandled = await TryExecuteCommandAsync(text, _userCommands, chatId);
 
         // Если команда не обработана — вызываем DefaultResponse (только в разрешенных чатах)
