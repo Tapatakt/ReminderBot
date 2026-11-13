@@ -573,9 +573,9 @@ public class Bot : TelegramBotBase
             try
             {
                 DateTime now = DateTime.Now;
-                DateTime nextRun = now.Date.AddDays(1).AddHours(1); // 01:00 ночи
+                DateTime nextRun = now.Date.AddHours(1); // сегодня 01:00
 
-                // Если сейчас уже после 01:00, ждём до завтра 01:00
+                // Если сегодня 01:00 уже прошло, ждём до завтра 01:00
                 if (now.Hour >= 1)
                     nextRun = nextRun.AddDays(1);
 
